@@ -1,2 +1,23 @@
 @use 'core/reset';
+@use 'core/variables';
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: variables.$primary-color;
+    padding: 15px;
+
+    &__title {
+        font-family: variables.$fontfamily-header;
+        font-weight: variables.$fontweight-header;
+        font-size: variables.$fontsize-header;
+        color: white;
+    }
+
+    &__img {
+        width: 100px;
+    }
+}
 
