@@ -21,3 +21,46 @@
     }
 }
 
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-block: 40px;
+
+    &__ask {
+        font-family: variables.$fontfamily-main;
+        font-weight: variables.$fontweight-main;
+        font-size: variables.$fontsize-main;
+    }
+
+    &__arrow{
+        width: 55px;
+    }
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: variables.$fontfamily-main;
+    font-weight: 600;
+    gap: 3rem;
+}
+
+.movie, .year {
+
+    &__title {
+        margin-right: 1vh;
+        font-size: 22px;
+    }
+
+    &__box {
+        font-size: 20px;
+        padding-inline: 10px 40px;
+        padding-block: 8px;
+        border-radius: 5px;
+        border: solid 3px variables.$primary-color;
+    }
+}
