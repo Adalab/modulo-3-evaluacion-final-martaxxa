@@ -1,3 +1,4 @@
-# Mi primer proyecto de React
+# Evaluación modulo 3 - React
 
-Escríbeme!!!
+Marta Chacartegui Arenas
+[READ ME pendiente]
