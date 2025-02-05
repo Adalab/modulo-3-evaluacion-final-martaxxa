@@ -72,7 +72,8 @@
     margin-block: 3rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -82,17 +83,20 @@
     border-radius: 1rem;
     text-align: center;
     list-style-type: none;
+    width: 200px; 
+    height: 430px;
 
     &__img {
-        width: 15rem;
+        width: 100%;
+        height: auto;
     }
 
     &__text {
         font-family: variables.$fontfamily-main;
         font-weight: variables.$fontweight-main;
         font-weight: variables.$fontweight-main;
-        font-size: 23px;
-        padding: 0.5rem;
+        font-size: 1rem;
+        padding-top: 2rem;
     }
 
     &__wow {
@@ -100,7 +104,7 @@
         font-weight: variables.$fontweight-main;
         font-family: variables.$fontfamily-main;
         font-weight: variables.$fontweight-main;
-        font-size: 20px;
+        font-size: 1rem;
         color: white;
     }
 }

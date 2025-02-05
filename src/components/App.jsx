@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import MovieSceneList from './MovieSceneList';
 
 import '../styles/App.scss';
 
@@ -6,7 +7,7 @@ import dataJson from '../data/data.json';
 
 function App() {
 
-  const [movies, setMovies] = useState([dataJson]);
+  const [movies, setMovies] = useState(dataJson);
 
   return (
     <>
@@ -35,23 +36,9 @@ function App() {
             </select>
           </div>  
         </div>
-        <ul className='list'>
-          <li className='cards'>
-            <img className='cards__img' src='./src/images/cars-3.png' alt='Poster Cars 3'/>
-            <p className='cards__text'>Cars 3 - 2017</p>
-            <p className='cards__wow'>Wow.</p>
-          </li>
-          <li className='cards'>
-            <img className='cards__img' src='./src/images/cars-3.png' alt='Poster Cars 3'/>
-            <p className='cards__text'>Cars 3 - 2017</p>
-            <p className='cards__wow'>Wow.</p>
-          </li>
-          <li className='cards'>
-            <img className='cards__img' src='./src/images/cars-3.png' alt='Poster Cars 3'/>
-            <p className='cards__text'>Cars 3 - 2017</p>
-            <p className='cards__wow'>Wow.</p>
-          </li>
-        </ul>
+        
+        <MovieSceneList movies={movies}/>
+      
       </main>
     </>
   )
