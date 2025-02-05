@@ -2,6 +2,7 @@
 @use 'core/variables';
 
 .header {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,5 +63,44 @@
         padding-block: 8px;
         border-radius: 5px;
         border: solid 3px variables.$primary-color;
+    }
+}
+
+.list {
+    width: 100%;
+    margin-inline: 2rem;
+    margin-block: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cards {
+    background-color: variables.$primary-color;
+    padding: 10px;
+    border-radius: 1rem;
+    text-align: center;
+    list-style-type: none;
+
+    &__img {
+        width: 15rem;
+    }
+
+    &__text {
+        font-family: variables.$fontfamily-main;
+        font-weight: variables.$fontweight-main;
+        font-weight: variables.$fontweight-main;
+        font-size: 23px;
+        padding: 0.5rem;
+    }
+
+    &__wow {
+        font-family: variables.$fontfamily-main;
+        font-weight: variables.$fontweight-main;
+        font-family: variables.$fontfamily-main;
+        font-weight: variables.$fontweight-main;
+        font-size: 20px;
+        color: white;
     }
 }
