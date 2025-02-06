@@ -5,16 +5,26 @@ import '../styles/App.scss';
 
 function App() {
 
+  //Variables de estado
   const [movies, setMovies] = useState([]);
+  const [filterMovie, setFilterMovie] = useState('');
 
+  //
   useEffect( () => {
-    fetch('https://owen-wilson-wow-api.onrender.com/wows/random?results=5')
+    fetch('https://owen-wilson-wow-api.onrender.com/wows/random?results=50')
       .then (response => response.json())
       .then (dataJson => {
         setMovies(dataJson);
       });
   }, []);
 
+  //Eventos
+  const handleInputFilterMovie = (ev) => {
+    ev.preventDefault();
+    setFilterMovie(ev.target.value);
+  }
+
+  const filteredMovies = movies.filter(movie => movie.movie.toLocaleLowerCase().includes(filterMovie.toLocaleLowerCase()));
 
   return (
     <>
@@ -30,7 +40,14 @@ function App() {
         <div className='inputs'>
           <div className='movie'>
             <label className='movie__title' for="Movie">Movie:</label>
-            <input className='movie__box' type="text" id="movie" name="movie" placeholder="Search the movie here" />
+            <input className='movie__box' 
+              autoComplete='off' 
+              type="search" 
+              name="search" 
+              placeholder="Search the movie"
+              onInput={handleInputFilterMovie} 
+              value={filterMovie} 
+              />
           </div>
           <div className='year'>
             <label className='year__title' for="Year">Year:</label>
@@ -43,7 +60,7 @@ function App() {
             </select>
           </div>  
         </div>
-        <MovieSceneList movies={movies}/>
+        <MovieSceneList movies={filteredMovies}/>
       </main>
       <footer className='footer'>
         <p className='footer__text'>Adalab®2025</p>

@@ -89,7 +89,7 @@
     text-align: center;
     list-style-type: none;
     width: 200px; 
-    height: 450px;
+    height: 490px;
 
     &__img {
         width: 100%;
@@ -120,6 +120,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 0.5rem;
 
     &__text {
         font-family: variables.$fontfamily-main;
