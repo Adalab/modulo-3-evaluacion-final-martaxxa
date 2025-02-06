@@ -10,7 +10,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [filterMovie, setFilterMovie] = useState('');
   const [years, setYears] = useState ([]);
-  const [filterYear , setFilterYear] = useState('');
+  const [filterYear, setFilterYear] = useState('');
 
   //
   useEffect( () => {
@@ -37,7 +37,7 @@ function App() {
     setFilterYear(ev.target.value);
   }
 
-  //const filteredYear = years.filter(year => year.year.toLowerCase().includes(filterYear.toLowerCase()));
+  const filteredYear = years.filter(year => year.year.toLowerCase().includes(filterYear.toLowerCase()));
 
   return (
     <>
@@ -71,8 +71,14 @@ function App() {
           </form>  
         </div>
 
-        <MovieSceneList movies={filteredMovies}/>
-        
+        {filteredMovies.length === 0 ? (
+          <div className='no-results'>
+            <img className='no-results__img' src='src/images/so-sad.png' alt='Owen Wilson sad'/>
+          </div>
+        ):(
+          <MovieSceneList movies={filteredMovies}/>
+        )}
+
       </main>
       <footer className='footer'>
         <p className='footer__text'>Adalab®2025</p>
