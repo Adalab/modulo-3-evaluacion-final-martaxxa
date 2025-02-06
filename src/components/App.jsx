@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import MovieSceneList from './MovieSceneList';
+import FilterMovie from './FilterMovie';
 
 import '../styles/App.scss';
 
@@ -8,6 +9,8 @@ function App() {
   //Variables de estado
   const [movies, setMovies] = useState([]);
   const [filterMovie, setFilterMovie] = useState('');
+  const [years, setYears] = useState ([]);
+  const [filterYear , setFilterYear] = useState('');
 
   //
   useEffect( () => {
@@ -15,6 +18,9 @@ function App() {
       .then (response => response.json())
       .then (dataJson => {
         setMovies(dataJson);
+
+        /*const uniqueYears = [...new Set(dataJson.map(novia => movie.year))];
+        setYears(uniqueYears);*/
       });
   }, []);
 
@@ -26,6 +32,13 @@ function App() {
 
   const filteredMovies = movies.filter(movie => movie.movie.toLocaleLowerCase().includes(filterMovie.toLocaleLowerCase()));
 
+  const handleInputFilterYear = (ev) => {
+    ev.preventDefault();
+    setFilterYear(ev.target.value);
+  }
+
+  //const filteredYear = years.filter(year => year.year.toLowerCase().includes(filterYear.toLowerCase()));
+
   return (
     <>
       <header className='header'>
@@ -33,34 +46,33 @@ function App() {
         <h1 className='header__title'>Owen Wilson's "wow"</h1>
       </header>
       <main className='body'>
+
         <div className='presentation'>
           <h2 className='presentation__ask'>How many WOWs has Owen Wilson said?</h2>
           <img className='presentation__arrow' src='src/images/ico-arrow.png' alt='Icono de una flecha'/>
         </div>
+
         <div className='inputs'>
-          <div className='movie'>
-            <label className='movie__title' for="Movie">Movie:</label>
-            <input className='movie__box' 
-              autoComplete='off' 
-              type="search" 
-              name="search" 
-              placeholder="Search the movie"
-              onInput={handleInputFilterMovie} 
-              value={filterMovie} 
-              />
-          </div>
-          <div className='year'>
-            <label className='year__title' for="Year">Year:</label>
-            <select className='year__box' id="Year" name="Years">
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
+
+          <FilterMovie filterMovie={filterMovie} handleInputFilterMovie={handleInputFilterMovie}/>
+
+          <form className='year'>
+            <label className='year__title' htmlFor="Year">Year:</label>
+            <select className='year__box' 
+              id="Year" 
+              name="Years"
+              value={filterYear}
+              onChange={handleInputFilterYear}>
+                <option value="">All years</option>
+                {years.map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))}
             </select>
-          </div>  
+          </form>  
         </div>
+
         <MovieSceneList movies={filteredMovies}/>
+        
       </main>
       <footer className='footer'>
         <p className='footer__text'>Adalab®2025</p>
