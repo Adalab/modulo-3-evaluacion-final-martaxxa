@@ -1,13 +1,20 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import MovieSceneList from './MovieSceneList';
 
 import '../styles/App.scss';
 
-import dataJson from '../data/data.json';
-
 function App() {
 
-  const [movies, setMovies] = useState(dataJson);
+  const [movies, setMovies] = useState([]);
+
+  useEffect( () => {
+    fetch('https://owen-wilson-wow-api.onrender.com/wows/random?results=5')
+      .then (response => response.json())
+      .then (dataJson => {
+        setMovies(dataJson);
+      });
+  }, []);
+
 
   return (
     <>
@@ -36,10 +43,12 @@ function App() {
             </select>
           </div>  
         </div>
-        
         <MovieSceneList movies={movies}/>
-      
       </main>
+      <footer className='footer'>
+        <p className='footer__text'>Adalab®2025</p>
+        <p className='footer__text'>Módulo 3 - Marta Chacartegui</p>
+      </footer>
     </>
   )
 }
