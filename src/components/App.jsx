@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
-import MovieSceneList from './MovieSceneList';
-import FilterMovie from './FilterMovie';
-import FilterYear from './FilterYear';
+import {Routes, Route, useNavigate} from 'react-router';
+import LandingPage from './pages/LandingPage';
+import MoviesPage from './pages/MoviesPage';
 
 import '../styles/App.scss';
 
@@ -12,6 +12,8 @@ function App() {
   const [filterMovie, setFilterMovie] = useState('');
   const [years, setYears] = useState ([]);
   const [filterYear, setFilterYear] = useState('');
+
+  const navigate = useNavigate();
 
   //Llamada a la API
   useEffect( () => {
@@ -36,40 +38,30 @@ function App() {
     setFilterYear(ev.target.value);
   }
 
+  const handleNavigate = () => {
+    navigate('/page');
+  };
+
   const filteredMovies = movies
       .filter(movie => movie.movie.toLowerCase().includes(filterMovie.toLowerCase()))
       .filter(movie => (filterYear === '' ? true : movie.year.toString() === filterYear));
 
   return (
     <>
-      <header className='header'>
-        <img className='header__img' src='src/images/WOW.jpeg' alt='Owen Wilson meme'/>
-        <h1 className='header__title'>Owen Wilson's "wow"</h1>
-      </header>
-      <main className='body'>
-        <div className='presentation'>
-          <h2 className='presentation__ask'>How many WOWs has Owen Wilson said?</h2>
-          <img className='presentation__arrow' src='src/images/ico-arrow.png' alt='Icono de una flecha'/>
-        </div>
-
-        <div className='inputs'>
-          <FilterMovie filterMovie={filterMovie} handleInputFilterMovie={handleInputFilterMovie}/>
-          <FilterYear filterYear={filterYear} handleInputFilterYear={handleInputFilterYear} years={years}/>
-        </div>
-
-        {filteredMovies.length === 0 ? (
-          <div className='no-results'>
-            <img className='no-results__img' src='src/images/so-sad.png' alt='Owen Wilson sad'/>
-          </div>
-        ):(
-          <MovieSceneList movies={filteredMovies}/>
-        )}
-
-      </main>
-      <footer className='footer'>
-        <p className='footer__text'>Adalab®2025</p>
-        <p className='footer__text'>Módulo 3 - Marta Chacartegui</p>
-      </footer>
+      <Routes>
+        <Route index element={ <LandingPage handleNavigate={handleNavigate}/> }></Route>
+        <Route path='/page' element={
+          <MoviesPage 
+          filterMovie={filterMovie} 
+          handleInputFilterMovie={handleInputFilterMovie}
+          filterYear={filterYear}
+          handleInputFilterYear={handleInputFilterYear}
+          years={years}
+          filteredMovies={filteredMovies}
+          />
+        }>
+        </Route>
+      </Routes>
     </>
   )
 }
