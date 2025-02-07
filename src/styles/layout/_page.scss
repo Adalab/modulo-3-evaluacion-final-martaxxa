@@ -1,0 +1,39 @@
+@use '../core/variables' as variables;
+
+.body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+  
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-block: 40px;
+  
+    &__ask {
+      font-family: variables.$fontfamily-main;
+      font-weight: variables.$fontweight-main;
+      font-size: variables.$fontsize-main;
+    }
+  
+    &__arrow {
+      width: 55px;
+    }
+}
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+    &__img {
+      width: 30rem;
+      padding: 5rem;
+    }
+}

@@ -1,0 +1,70 @@
+@use "../core/variables" as variables;
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: variables.$fontfamily-main;
+  font-weight: 600;
+  gap: 3rem;
+}
+
+.movie,
+.year {
+  &__title {
+    margin-right: 1vh;
+    font-size: 22px;
+  }
+
+  &__box {
+    font-size: 20px;
+    padding-inline: 10px 40px;
+    padding-block: 8px;
+    border-radius: 5px;
+    border: solid 3px variables.$primary-color;
+  }
+}
+
+.list {
+  width: 100%;
+  margin-inline: 2rem;
+  margin-block: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards {
+  background-color: variables.$primary-color;
+  padding: 10px;
+  border-radius: 1rem;
+  text-align: center;
+  list-style-type: none;
+  width: 200px;
+  height: 500px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    font-family: variables.$fontfamily-main;
+    font-weight: variables.$fontweight-main;
+    font-weight: variables.$fontweight-main;
+    font-size: 1rem;
+    padding-top: 2rem;
+  }
+
+  &__wow {
+    font-family: variables.$fontfamily-main;
+    font-weight: variables.$fontweight-main;
+    font-family: variables.$fontfamily-main;
+    font-weight: variables.$fontweight-main;
+    font-size: 1rem;
+    color: white;
+    padding-top: 0.5rem;
+  }
+}

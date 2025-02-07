@@ -7,7 +7,7 @@ import '../styles/App.scss';
 
 function App() {
 
-  //Variables de estado
+  //Variables de estado 
   const [movies, setMovies] = useState([]);
   const [filterMovie, setFilterMovie] = useState('');
   const [years, setYears] = useState ([]);
@@ -47,7 +47,6 @@ function App() {
         <h1 className='header__title'>Owen Wilson's "wow"</h1>
       </header>
       <main className='body'>
-
         <div className='presentation'>
           <h2 className='presentation__ask'>How many WOWs has Owen Wilson said?</h2>
           <img className='presentation__arrow' src='src/images/ico-arrow.png' alt='Icono de una flecha'/>
