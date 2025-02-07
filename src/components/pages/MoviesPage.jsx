@@ -12,7 +12,7 @@ function MoviesPage({filterMovie, handleInputFilterMovie, filterYear, handleInpu
           src="src/images/WOW.jpeg"
           alt="Owen Wilson meme"
         />
-        <h1 className="header__title">Owen Wilson's "wow"</h1>
+        <h1 className="header__title">Owen Wilson's WOW</h1>
       </header>
       <main className="body">
         <div className="presentation">
