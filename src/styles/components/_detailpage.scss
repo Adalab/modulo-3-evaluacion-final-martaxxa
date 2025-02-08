@@ -12,7 +12,7 @@
 .detailpage {
   background-color: white;
   display: grid;
-  grid-template-columns: 50% 50%;  /* 2 columnas, 50% cada una */
+  grid-template-columns: 50% 50%;
   width: 60%;
   max-width: 700px;
   border-radius: 15px;
@@ -29,45 +29,63 @@
   &__info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
+    gap: 20px;
   }
 
   &__title {
     font-family: variables.$fontfamily-header;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-
-  &__line {
-    font-style: italic;
-    color: gray;
-    margin-bottom: 10px;
-  }
-
-  &__year, &__director {
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 5px;
   }
 
+  &__line {
+    font-family: variables.$fontfamily-main;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: variables.$primary-color;
+  }
+
+  &__year,
+  &__director {
+    font-family: variables.$fontfamily-main;
+    font-size: 1.1rem;
+  }
+
   &__audio {
+    font-family: variables.$fontfamily-main;
+    font-weight: 700;
+    font-size: 1.2rem;
     display: inline-block;
-    margin-top: 10px;
     text-decoration: none;
+    background-color: variables.$primary-color;
     color: white;
-    background-color: #ffcc00;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 10px;
+    border-radius: 1rem;
+    margin-top: 20px;
+  }
+
+  &__audio:hover {
+    background-color: #d69b1c;
   }
 }
 
 .detailpage__btn {
-  margin-top: 20px;
+  margin-top: 30px;
+  padding-inline: 1.75rem;
+  padding-block: 0.8rem;
+  background-color: variables.$secondary-color;
+  font-family: variables.$fontfamily-main;
+  font-weight: variables.$fontweight-header;
   text-decoration: none;
+  font-size: 20px;
   color: white;
-  background-color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 1rem;
+  border: solid 2px black;
+  box-shadow: 3px 5px 10px white;
+}
+
+.detailpage__btn:hover {
+  background-color: #ac0000;
+  transform: translate(3px, 3px) scale(1);
 }

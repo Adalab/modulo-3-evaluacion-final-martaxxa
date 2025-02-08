@@ -26,13 +26,15 @@ function DetailPage({movies}) {
       <div className='detailpage__info'>
         <h2 className='detailpage__title'>{selectedMovie.movie}</h2>
         <h3 className='detailpage__line'>{selectedMovie.full_line}</h3>
-        <p className='detailpage__year'>{selectedMovie.year}</p>
-        <p className='detailpage__director'><strong>Director/es:</strong>{selectedMovie.director}</p>
-        <Link className='detailpage__audio' href={selectedMovie.audio}>🎧 Escuchar WOW</Link>
+        <p className='detailpage__year'><strong>Año: </strong>{selectedMovie.year}</p>
+        <p className='detailpage__director'><strong>Director/es: </strong>{selectedMovie.director}</p>
+        <a className='detailpage__audio' href={selectedMovie.audio}>🔊 Escuchar WOW</a>
       </div>
     </div>
-    <button>
-      <Link className='detailpage__btn' to='/page'>Volver</Link>
+    <button className='detailpage__btn'>
+      <Link to='/page' style={{ textDecoration: 'none' }} >
+      Volver
+      </Link>
     </button>
   </section>
 )}
