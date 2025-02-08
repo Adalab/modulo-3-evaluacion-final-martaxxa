@@ -24,6 +24,11 @@ function DetailPage({ movies }) {
           src="src/images/so-sad.png"
           alt="Owen Wilson sad"
         />
+        <button className="detailpage__btn">
+          <Link to="/page" style={{ textDecoration: "none" }}>
+            Volver
+          </Link>
+        </button>
       </div>
   )};
 
