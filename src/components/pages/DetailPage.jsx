@@ -5,11 +5,14 @@ function DetailPage({ movies }) {
   const {movieId} = useParams();
   const [movieName, timestamp] = movieId.split("-");
 
+
   const selectedMovie = movies.find(
     (movie) =>
-      movie.movie === decodeURIComponent(movieName) &&
-      movie.timestamp === decodeURIComponent(timestamp)
+      movie.movie.trim().toLowerCase() === decodeURIComponent(movieName).trim().toLowerCase() &&
+      movie.timestamp.trim() === decodeURIComponent(timestamp).trim()
   );
+
+  console.log("🎬 Selected Movie:", selectedMovie);
 
   if (!selectedMovie) {
     return (
