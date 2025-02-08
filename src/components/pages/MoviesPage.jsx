@@ -1,3 +1,4 @@
+import {Link} from 'react-router';
 import PropTypes from "prop-types";
 import MovieSceneList from '../movies/MovieSceneList';
 import FilterMovie from '../movies/FilterMovie';
@@ -7,11 +8,13 @@ function MoviesPage({filterMovie, handleInputFilterMovie, filterYear, handleInpu
   return (
     <section>
       <header className="header">
-        <img
-          className="header__img"
-          src="src/images/WOW.jpeg"
-          alt="Owen Wilson meme"
-        />
+        <Link to='/'>
+          <img
+            className="header__img"
+            src="src/images/WOW.jpeg"
+            alt="Owen Wilson meme"
+          />
+        </Link>
         <h1 className="header__title">Owen Wilson's WOW</h1>
       </header>
       <main className="body">
