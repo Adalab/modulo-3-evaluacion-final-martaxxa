@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import {Routes, Route, useNavigate} from 'react-router';
 import LandingPage from './pages/LandingPage';
 import MoviesPage from './pages/MoviesPage';
+import DetailPage from './pages/DetailPage';
 
 import '../styles/App.scss';
 
@@ -61,6 +62,7 @@ function App() {
           />
         }>
         </Route>
+        <Route path='detail/:movie' element={<DetailPage movies={movies}/>}></Route>
       </Routes>
     </>
   )
