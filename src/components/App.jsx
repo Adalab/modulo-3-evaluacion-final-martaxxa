@@ -62,7 +62,7 @@ function App() {
           />
         }>
         </Route>
-        <Route path='detail/:movie' element={<DetailPage movies={movies}/>}></Route>
+        <Route path='/detail/:movieId' element={<DetailPage movies={movies} />}></Route>
       </Routes>
     </>
   )
