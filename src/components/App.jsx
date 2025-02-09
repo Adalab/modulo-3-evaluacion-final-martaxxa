@@ -28,15 +28,29 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    const savedFilterMovie = localStorage.getItem("filterMovie") || "";
+    const savedFilterYear = localStorage.getItem("filterYear") || "";
+  
+    setFilterMovie(savedFilterMovie);
+    setFilterYear(savedFilterYear);
+  }, []);
+
   //Eventos
   const handleInputFilterMovie = (ev) => {
     ev.preventDefault();
-    setFilterMovie(ev.target.value);
+    const value = ev.target.value; 
+    setFilterMovie(value);
+
+    localStorage.setItem('filterMovie', value);
   }
 
   const handleInputFilterYear = (ev) => {
     ev.preventDefault();
-    setFilterYear(ev.target.value);
+    const value = ev.target.value;
+    setFilterYear(value);
+
+    localStorage.setItem('filterYear', value);
   }
 
   const handleNavigate = () => {
