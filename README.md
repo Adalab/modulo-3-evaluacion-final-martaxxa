@@ -11,6 +11,7 @@ Además, ¡puedes leer los detalles de cada película al hacer clic en ella! �
 
 <h2>Tecnologías usadas 🚀</h2>
 <ul>
+  <li>HTML5</li>
   <li>React</li>
   <li>SCSS</li>
   <li>Vite</li>
@@ -19,7 +20,25 @@ Además, ¡puedes leer los detalles de cada película al hacer clic en ella! �
  API de la que extraemos la información: 
  <a href='owen-wilson-wow-api.onrender.com'><strong>The Owen Wilson WOW API</strong></a>
 
+ <h2>Requisitos 🌐</h2>
+ <ul>
+  <li><strong>Un navegador web moderno</strong> (Chrome, Firefox, Safari, Edge) para visualizar la app.</li>
+  <li>Conexión a <strong>Internet</strong> para poder obtener datos de la app</li>
+</ul>
+
+<h2>¿Cómo ejecutar la app? 🤔</h2>
+<ol> 
+<li><strong>Clona el repositorio:</strong> git clone https://github.com/Adalab/modulo-3-evaluacion-final-martaxxa.git</li>   
+<li><strong>Abre el proyecto:</strong> Recomendamos usar Visual Code.</li>
+<li><strong>Instala las dependencias en la consola para ejecutarlo:</strong> npm install</li>
+<li><strong>Inicia el servidor de desarrollo:</strong> npm run dev</li>
+</ol>
+
  <h3>Puedes disfrutar de la aplicación aquí 👇</h3>
  [link github pages]
 
- <h3>Espero que la disfrutes tanto como yo he disfrutado haciéndola 😌</h3>
+ <h2>Autora 👩‍💻</h2>
+ Marta Chacartegui
+ @martaxxa
+
+  <h4>Espero que la disfrutes tanto como yo he disfrutado haciéndola 😌</h4>
