@@ -7,7 +7,12 @@
   flex-direction: column;
   font-family: variables.$fontfamily-main;
   font-weight: 600;
-  gap: 3rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+
+  @include variables.tablet {
+    flex-direction: row;
+  }
 }
 
 .movie,
@@ -15,11 +20,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
+
+  @include variables.tablet{
+    flex-direction: row;
+  }
 
   &__title {
     margin-right: 1vh;
     font-size: 22px;
+
+    @include variables.tablet{
+      font-size: 25px;
+    }
   }
 
   &__box {
@@ -39,11 +52,6 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
-
-  @include variables.desktop {
-    margin-inline: 2rem;
-    margin-block: 3rem;
-  }
 }
 
 .cards {

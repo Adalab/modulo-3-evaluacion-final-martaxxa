@@ -14,11 +14,19 @@
     font-weight: variables.$fontweight-header;
     font-size: variables.$fontsize-header;
     color: white;
+
+    @include variables.tablet {
+      font-size: 50px;
+    }
   }
 
   &__img {
     width: 160px;
     transition: transform 0.5s ease-in-out;
+
+    @include variables.tablet {
+      width: 120px;
+    }
   }
 
   &__img:hover {

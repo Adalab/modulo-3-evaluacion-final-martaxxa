@@ -23,10 +23,19 @@
     font-weight: variables.$fontweight-main;
     font-size: variables.$fontsize-main;
     text-align: center;
+    margin-bottom: 1rem;
+
+    @include variables.tablet {
+      font-size: 30px;
+    }
   }
 
   &__arrow {
     width: 45px;
+
+    @include variables.tablet {
+      width: 55px;
+    }
   }
 }
 
@@ -34,10 +43,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-
+  height: auto;
+  min-height: 60vh;
 
   &__img {
-    width: 15rem;
+    width: 30rem;
   }
 }

@@ -18,27 +18,24 @@
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
-  @include variables.desktop {
+  @include variables.tablet {
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 60%;
+    width: 100%;
     max-width: 700px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    gap: 20px;
   }
 
   &__img {
     height: auto;
-    max-height: 300px;
+    object-fit: cover;
 
-    @include variables.desktop {
-      width: 100%;
+    @include variables.tablet {
       height: 100%;
-      object-fit: cover;
     }
   }
 
@@ -46,10 +43,12 @@
     padding: 20px;
     text-align: center;
 
-    @include variables.desktop {
+    @include variables.tablet {
       display: flex;
       flex-direction: column;
       padding: 30px;
+      text-align: start;
+      gap: 1rem;
     }
   }
 
@@ -58,7 +57,7 @@
     font-size: 1.8rem;
     margin-bottom: 10px;
 
-    @include variables.desktop {
+    @include variables.tablet {
       font-size: 2rem;
     }
   }
@@ -70,8 +69,8 @@
     color: variables.$primary-color;
     margin-bottom: 10px;
 
-    @include variables.desktop {
-      font-size: 1.3rem;
+    @include variables.tablet {
+      font-size: 1.5rem;
     }
   }
 
@@ -79,6 +78,10 @@
   &__director {
     font-family: variables.$fontfamily-main;
     font-size: 1.1rem;
+
+    @include variables.tablet {
+      font-size: 1.3rem;
+    }
   }
 
   &__audio {
@@ -92,26 +95,36 @@
     padding: 10px;
     border-radius: 1rem;
     margin-block: 20px;
+
+    @include variables.tablet {
+      font-size: 1.5rem;
+    }
   }
 
   &__audio:hover {
     background-color: #d69b1c;
   }
+
 }
 
 .detailpage__btn {
-  margin-block: 30px;
+  margin-block: 2rem;
   padding-inline: 1.75rem;
   padding-block: 0.8rem;
   background-color: variables.$secondary-color;
   font-family: variables.$fontfamily-main;
   font-weight: variables.$fontweight-header;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.3rem;
   color: white;
   border-radius: 1rem;
   border: solid 2px black;
   box-shadow: 3px 5px 10px white;
+
+  @include variables.tablet {
+    font-size: 1.8rem;
+    margin-block: 3rem;
+  }
 }
 
 .detailpage__btn:hover {

@@ -14,8 +14,8 @@
     font-size: 40px;
     margin-bottom: 40px;
     text-align: center;
-    
-    @include variables.desktop {
+
+    @include variables.tablet {
       font-size: 60px;
       margin-bottom: 40px;
     }
@@ -28,7 +28,7 @@
     font-size: 50px;
     text-align: center;
     
-    @include variables.desktop {
+    @include variables.tablet {
       font-size: 80px;
     }
   }
@@ -42,7 +42,7 @@
     margin-bottom: 40px;
     transition: transform 0.5s ease-in-out;
     
-    @include variables.desktop {
+    @include variables.tablet {
       width: 10rem;
       margin-bottom: 60px;   
     }
@@ -63,7 +63,7 @@
     border: solid 2px black;
     box-shadow: 3px 5px 10px white;
     
-    @include variables.desktop {
+    @include variables.tablet {
       font-size: 25px;
       padding: 15px;    
     }
