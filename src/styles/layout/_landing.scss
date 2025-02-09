@@ -1,54 +1,76 @@
 @use "../core/variables" as variables;
 
 .landing {
-    background-color: variables.$primary-color;
-    height: 100vh;  
-    width: 100%;    
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  background-color: variables.$primary-color;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    &__welcome {
-        font-family: variables.$fontfamily-main;
-        font-size: 60px;
-        margin-bottom: 40px;
-    }
-
-    &__title1, &__title2 {
-        font-family: variables.$fontfamily-header;
-        color: white;
-        font-size: 80px;
-    }
-
-    &__title2 {
-        margin-bottom: 40px;
-    }
-
-    &__img {
-        width: 10rem;
-        margin-bottom: 60px;
-        transition: transform 0.5s ease-in-out;
-    }
+  &__welcome {
+    font-family: variables.$fontfamily-main;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
     
-    &__img:hover {
-        transform: rotate(360deg);
+    @include variables.desktop {
+      font-size: 60px;
+      margin-bottom: 40px;
     }
+  }
 
-    &__btn {
-        background-color: variables.$secondary-color;
-        font-family: variables.$fontfamily-main;
-        font-weight: variables.$fontweight-header;
-        font-size: 25px;
-        color: white;
-        padding: 15px;
-        border-radius: 1rem;
-        border: solid 2px black;
-        box-shadow: 3px 5px 10px white;
+  &__title1,
+  &__title2 {
+    font-family: variables.$fontfamily-header;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    
+    @include variables.desktop {
+      font-size: 80px;
     }
+  }
 
-    &__btn:hover {
-        background-color: #ac0000;
-        transform: translate(3px, 3px) scale(1);
+  &__title2 {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 8rem;
+    margin-bottom: 40px;
+    transition: transform 0.5s ease-in-out;
+    
+    @include variables.desktop {
+      width: 10rem;
+      margin-bottom: 60px;   
     }
+  }
+
+  &__img:hover {
+    transform: rotate(360deg);
+  }
+
+  &__btn {
+    background-color: variables.$secondary-color;
+    font-family: variables.$fontfamily-main;
+    font-weight: variables.$fontweight-header;
+    font-size: 20px;
+    padding: 12px;
+    color: white;
+    border-radius: 1rem;
+    border: solid 2px black;
+    box-shadow: 3px 5px 10px white;
+    
+    @include variables.desktop {
+      font-size: 25px;
+      padding: 15px;    
+    }
+  }
+
+  &__btn:hover {
+    background-color: #ac0000;
+    transform: translate(3px, 3px) scale(1);
+  }
 }

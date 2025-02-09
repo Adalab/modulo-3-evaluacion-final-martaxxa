@@ -1,10 +1,30 @@
 $fontfamily-header: "Fascinate Inline", serif;
 $fontweight-header: 400;
-$fontsize-header: 50px;
+$fontsize-header: 40px;
 
 $fontfamily-main: "Quicksand", serif;
 $fontweight-main: 700;
-$fontsize-main: 30px;
+$fontsize-main: 25px;
 
 $primary-color: #fdb71d;
 $secondary-color: #f90000;
+
+//Responsive
+
+@mixin mobile {
+    @media (mad-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

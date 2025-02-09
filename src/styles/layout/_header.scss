@@ -1,7 +1,7 @@
 @use "../core/variables" as variables;
 
 .header {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
   }
 
   &__img {
-    width: 100px;
+    width: 160px;
     transition: transform 0.5s ease-in-out;
   }
 
