@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import wowImage from '../../images/WOW.jpeg';
+import wowImage from '/WOW.jpeg';
 
 function LandingPage({handleNavigate}) {
   return (

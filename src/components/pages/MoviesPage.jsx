@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import MovieSceneList from '../movies/MovieSceneList';
 import FilterMovie from '../movies/FilterMovie';
 import FilterYear from '../movies/FilterYear';
-import wowImage from '../../images/WOW.jpeg';
+import wowImage from '/WOW.jpeg';
 import icoArrow from '../../images/ico-arrow.png';
 import noResults from '../../images/so-sad.png';
 
