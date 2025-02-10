@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import wowImage from '../../images/WOW.jpeg';
 
 function LandingPage({handleNavigate}) {
   return (
@@ -9,7 +10,7 @@ function LandingPage({handleNavigate}) {
         <h1 className="landing__title2">WOW</h1>
         <img
           className="landing__img"
-          src="src/images/WOW.jpeg"
+          src={wowImage}
           alt="Owen Wilson meme"
         />
         <button className="landing__btn" onClick={handleNavigate}>

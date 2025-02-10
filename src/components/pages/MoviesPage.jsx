@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import MovieSceneList from '../movies/MovieSceneList';
 import FilterMovie from '../movies/FilterMovie';
 import FilterYear from '../movies/FilterYear';
+import wowImage from '../../images/WOW.jpeg';
+import icoArrow from '../../images/ico-arrow.png';
+import noResults from '../../images/so-sad.png';
 
 function MoviesPage({filterMovie, handleInputFilterMovie, filterYear, handleInputFilterYear, years, filteredMovies }) {
   return (
@@ -11,7 +14,7 @@ function MoviesPage({filterMovie, handleInputFilterMovie, filterYear, handleInpu
         <Link to='/'>
           <img
             className="header__img"
-            src="src/images/WOW.jpeg"
+            src={wowImage}
             alt="Owen Wilson meme"
           />
         </Link>
@@ -24,7 +27,7 @@ function MoviesPage({filterMovie, handleInputFilterMovie, filterYear, handleInpu
           </h2>
           <img
             className="presentation__arrow"
-            src="src/images/ico-arrow.png"
+            src={icoArrow}
             alt="Icono de una flecha"
           />
         </div>
@@ -45,7 +48,7 @@ function MoviesPage({filterMovie, handleInputFilterMovie, filterYear, handleInpu
           <div className="no-results">
             <img
               className="no-results__img"
-              src="src/images/so-sad.png"
+              src={noResults}
               alt="Owen Wilson sad"
             />
           </div>

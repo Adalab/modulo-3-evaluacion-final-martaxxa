@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router";
 import PropTypes from "prop-types";
+import noResults from '../../images/so-sad.png';
 
 function DetailPage({ movies }) {
   const {movieId} = useParams();
@@ -21,7 +22,7 @@ function DetailPage({ movies }) {
         <p className="not-found__text">Movie not found</p>
         <img
           className="not-found__img"
-          src="src/images/so-sad.png"
+          src={noResults}
           alt="Owen Wilson sad"
         />
         <button className="detailpage__btn">
