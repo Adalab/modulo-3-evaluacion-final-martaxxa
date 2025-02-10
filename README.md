@@ -35,7 +35,7 @@ Además, ¡puedes leer los detalles de cada película al hacer clic en ella! �
 </ol>
 
  <h3>Puedes disfrutar de la aplicación aquí 👇</h3>
- [link github pages]
+ <a href='https://beta.adalab.es/modulo-3-evaluacion-final-martaxxa/#/page'>⛓️ Owen Wilson's WOW</a>
 
  <h2>Autora 👩‍💻</h2>
  Marta Chacartegui
