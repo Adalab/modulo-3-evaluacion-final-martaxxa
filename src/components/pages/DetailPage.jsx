@@ -13,8 +13,6 @@ function DetailPage({ movies }) {
       movie.timestamp.trim() === decodeURIComponent(timestamp).trim()
   );
 
-  console.log("🎬 Selected Movie:", selectedMovie);
-
   if (!selectedMovie) {
     return (
       <div className="not-found">
